@@ -1,0 +1,4 @@
+[submodule "nvme-cli"]
+	path = nvme-cli
+	url = https://github.com/linux-nvme/nvme-cli.git
+	shallow = true
