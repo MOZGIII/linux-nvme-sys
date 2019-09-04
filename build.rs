@@ -4,6 +4,12 @@ use std::path::PathBuf;
 fn main() {
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
+        .default_enum_style(bindgen::EnumVariation::ModuleConsts)
+        .generate_comments(true)
+        .derive_debug(true)
+        .derive_default(true)
+        .derive_partialeq(true)
+        .derive_eq(true)
         .generate()
         .expect("Unable to generate bindings");
 
